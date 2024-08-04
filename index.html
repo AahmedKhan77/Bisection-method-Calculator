@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bisection Method Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bisection Method Calculator</h1>
+        <form>
+            <label for="function">Function (f(x)): </label>
+            <input type="text" id="function" placeholder="e.g., x*x - 4" required>
+            <label for="a">Interval Start (a): </label>
+            <input type="number" id="a" step="any" required>
+            <label for="b">Interval End (b): </label>
+            <input type="number" id="b" step="any" required>
+            <label for="maxIterations">Max Iterations: </label>
+            <input type="number" id="maxIterations" value="100" required>
+            <button type="button" onclick="findRoot()">Find Root</button>
+        </form>
+        <div id="result"></div>
+        <div>
+            <h2>Find Intervals</h2>
+            <form>
+                <label for="intervalFunction">Function (f(x)): </label>
+                <input type="text" id="intervalFunction" placeholder="e.g., x*x - 4" required>
+                <label for="intervalStart">Start of Search Range: </label>
+                <input type="number" id="intervalStart" step="any" required>
+                <label for="intervalEnd">End of Search Range: </label>
+                <input type="number" id="intervalEnd" step="any" required>
+                <button type="button" onclick="findIntervals()">Find Intervals</button>
+            </form>
+            <div id="intervalResult"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
